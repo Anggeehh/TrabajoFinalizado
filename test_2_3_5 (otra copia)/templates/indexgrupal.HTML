@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GESTOR DE PRODUCTOS</title> 
+    
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header id="especial">
+        <h1 id="titulo">TITULO PRINCIPAL</h1>
+    </header>
+    
+    <main>
+        <button id="boton-magico">Cambiar modo</button>
+
+        <div id="filtros" class="contenedor-filtros">
+            <button class="btn-filtro active" data-filtro="todos">Todos</button>
+            <button class="btn-filtro" data-filtro="drogueria">Droguería</button>
+            <button class="btn-filtro" data-filtro="fruteria">Frutería</button>
+            <button class="btn-filtro" data-filtro="bebidas">Bebidas</button>
+        </div>
+
+        <section data-categoria="drogueria"> 
+            <h2>{{ item.categoria }}</h2>
+            
+            <div class="contenedor-productos">
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/lejia.png" alt="Botella de lejía amarilla" width="200">
+                    </a>
+                    <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+<!--Recordatorio, o metemos una nueva variable en la DB para la capacidad 
+o lo hacemos sin capacidad y en vez de poner agua de 2 litros etc, ponemos simplemente AGUA-->
+                    <p></p>
+                        <li><strong>Capacidad:</strong> 2L</li>
+                        <li><strong>Stock:</strong> Si</li>
+                    <p></p>
+                        <li><strong>Capacidad:</strong> 5L</li>
+                        <li><strong>Stock:</strong> No</li>
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/detergente.png" alt="Botella de detergente Marsella" width="200">
+                    </a>
+                    <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/oxigeno.png" alt="Botella de oxígeno activo azul" width="200">
+                    </a>
+                    <ul> 
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section data-categoria="fruteria">
+            <h2>{{ item.categoria }}</h2>
+            
+            <div class="contenedor-productos">
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/manzana-removebg-preview.png" alt="Manzanas rojas frescas" width="200">
+                    </a>
+                    <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3> 
+                    <a href="#">
+                        <img src="img/albaricoque.png" alt="Albaricoques maduros" width="200">
+                    </a>
+                     <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/peras.png" alt="Peras conferencia" width="200">
+                    </a>
+                     <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <hr>
+
+        <section data-categoria="bebidas">
+            <h2>{{ item.categoria }}</h2>
+            
+            <div class="contenedor-productos">
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/agua.png" alt="Botella de agua azul" width="200">
+                    </a>
+                    <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/coca.png" alt="Lata de Coca Cola roja" width="200">
+                    </a>
+                    <ul>
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+
+                <article class="ficha-producto">
+                    <h3>{{ item.nombre }}</h3>
+                    <a href="#">
+                        <img src="img/nestea.png" alt="Lata de té verde sabor maracuyá" width="200">
+                    </a>
+                    <ul> 
+                        <li><strong>Fecha de Caducidad</strong> {{ item.fecha_caducidad }}</li>
+                        <li><strong>Marca</strong> {{ item.marca }}</li>
+                        <li><strong>Precio</strong> {{ item.precio }}</li>
+                        <li><strong>Stock:</strong> {{ item.stock }}</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <div id="modal-producto" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar-modal">&times;</span>
+            <h2 id="modal-titulo">Título Producto</h2>
+            <img id="modal-imagen" src="" alt="Imagen del producto" width="200">
+            <ul id="modal-detalles"></ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>Trabajo realizado por Ángel Piñero, José Ramirez y Jose Carlos Vallejo.</p>
+    </footer>
+  <script src="main.js"></script>
+</body>
+</html>
