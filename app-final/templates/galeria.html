@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style_2_3_4.css') }}">
+</head>
+<body>
+    <h1>Prueba de archivos estaticos</h1>
+    <p></p>
+    <img src="{{ url_for('static', filename='img/fotoprog.png') }}" alt="Imagen de prueba">
+
+    <ul>
+    {% for favorito in favoritos %}
+        <li>{{ favorito.nombre }} - Categoría: {{ favorito.categoria }}</li>
+    {% endfor %}
+    <p>Lista generada por Ángel Piñero Orellana - Sesión Backend</p>
+    </ul>
+
+</body>
+</html>
