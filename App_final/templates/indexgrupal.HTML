@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="/App_final/static/css/style.css">
+    <link rel="stylesheet" href={{url_for('static', filename='css/style.css') }}>
 </head>
 <body>
 
@@ -40,7 +40,7 @@
                         <li><strong>Marca</strong> {{ item.marca }}</li>
                         <li><strong>Precio</strong> {{ item.precio }}</li>
                         <li><strong>Stock:</strong> {{ item.stock }}</li>
-                        
+
                     <p></p>
                         <li><strong>Capacidad:</strong> 2L</li>
                         <li><strong>Stock:</strong> Si</li>
